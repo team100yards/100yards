@@ -60,19 +60,37 @@ nav ul li a:hover {
 #hero {
     background-color: #1a1a1a;
     color: #f0ece4;
-    text-align: center;
-    padding: 100px 20px;
+    padding: 80px 40px;
     border-bottom: 4px solid #c9a84c;
 }
 
-#hero h1 {
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-logo {
+    height: 180px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-text h1 {
     font-size: 3rem;
     letter-spacing: 0.04em;
     margin-bottom: 16px;
     color: #f0ece4;
 }
 
-#hero p {
+.hero-text p {
     font-size: 1.2rem;
     color: #b0aa9e;
     margin-bottom: 32px;
@@ -155,4 +173,36 @@ footer {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 0.85rem;
     margin-top: 60px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 650px) {
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-logo {
+        height: 120px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
 }
