@@ -1,51 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100 Yards - Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100 Yards — Helping Our Community Go the Distance</title>
+<meta name="description" content="100 Yards helps our community push forward — one yard at a time — through mentorship, training, and resources for personal and community growth.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231F3D2B%22/><text x=%2250%22 y=%2266%22 font-size=%2250%22 text-anchor=%22middle%22 fill=%22%23D9A441%22 font-family=%22Arial%22 font-weight=%22bold%22>100</text></svg>">
+<meta property="og:title" content="100 Yards — Helping Our Community Go the Distance">
+<meta property="og:description" content="Mentorship, training, and resources to help individuals and teams reach their full potential — one yard at a time.">
+<meta property="og:image" content="https://team100yards.github.io/100yards/100%20yards%20logo.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="100 yards logo.png" alt="100 Yards Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="academy.html">Academy</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <section id="hero" style="background-color:#1a1a1a; border-bottom:4px solid #c9a84c; padding:80px 60px;">
-        <div style="display:flex; flex-direction:row; align-items:center; justify-content:flex-start; gap:60px; max-width:1000px; margin:0 auto;">
-            <img src="100 yards logo.png" alt="100 Yards Logo" style="height:200px; width:auto; flex-shrink:0;">
-            <div>
-                <h1 style="font-size:3rem; color:#f0ece4; margin-bottom:16px; font-family:'Ubuntu', sans-serif;">Welcome to 100 Yards</h1>
-                <p style="font-size:1.2rem; color:#b0aa9e; margin-bottom:32px;">Helping our community go the distance — one yard at a time.</p>
-                <a href="#about" class="btn">Learn More</a>
-            </div>
-        </div>
-    </section>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="100%20yards%20logo.png" alt="100 Yards logo">
+      <span class="brand-name">100 Yards</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="academy.html">Academy</a>
+      <a href="resources.html">Resources</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>100 Yards is dedicated to helping our community achieve their goals. We believe in the power of every individual to push forward, no matter how far the finish line seems.</p>
-        </section>
+<main id="main">
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Community · Mentorship · Growth</span>
+      <h1>Go the distance, one yard at a time</h1>
+      <p class="lede">100 Yards is dedicated to helping our community achieve their goals — through training, mentorship, and a network that pushes every individual forward, no matter how far the finish line seems.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="academy.html">Explore the Academy</a>
+        <a class="btn btn-ghost" href="#about">Learn more</a>
+      </div>
+    </div>
+  </section>
 
-        <section id="mission">
-            <h2>Our Mission</h2>
-            <p>To inspire and empower individuals to make positive changes in their lives and in their communities — one step, one yard at a time.</p>
-        </section>
-    </main>
+  <div class="yard-line" aria-hidden="true">
+    <div class="marks">
+      <div class="mark"><span>10</span></div>
+      <div class="mark"><span>20</span></div>
+      <div class="mark"><span>30</span></div>
+      <div class="mark"><span>40</span></div>
+      <div class="mark"><span>50</span></div>
+      <div class="mark"><span>60</span></div>
+      <div class="mark"><span>70</span></div>
+      <div class="mark"><span>80</span></div>
+      <div class="mark"><span>90</span></div>
+      <div class="mark"><span>100</span></div>
+    </div>
+  </div>
 
-    <footer>
-        <p>&copy; 2026 100 Yards. All rights reserved.</p>
-    </footer>
+  <section class="section" id="about">
+    <div class="container two-col">
+      <div>
+        <span class="eyebrow" style="font-family: var(--font-display); color: var(--gold-dark); letter-spacing: .15em; font-size: .8rem;">About Us</span>
+        <h2>Every yard counts</h2>
+        <p>100 Yards is dedicated to helping our community achieve their goals. We believe in the power of every individual to push forward, no matter how far the finish line seems.</p>
+        <p>Whether you're taking your first step or your hundredth, our programs meet you where you are and help you keep moving.</p>
+      </div>
+      <div class="mission-card">
+        <h2>Our Mission</h2>
+        <p>To inspire and empower individuals to make positive changes in their lives and in their communities — one step, one yard at a time.</p>
+        <a class="btn btn-primary" href="contact.html">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <h2>Ready to start moving forward?</h2>
+    <p>Join the Academy for training and mentorship, or reach out and tell us where you're starting from.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="academy.html">Join the Academy</a>
+      <a class="btn btn-ghost" href="contact.html">Contact us</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>100 Yards</h3>
+      <p style="color: rgba(245,241,230,0.75); max-width: 320px;">Helping our community go the distance — one yard at a time.</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <a href="index.html">Home</a>
+      <a href="academy.html">Academy</a>
+      <a href="resources.html">Resources</a>
+      <a href="index.html#about">About</a>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <a href="mailto:100yards@proton.me">100yards@proton.me</a>
+      <a href="tel:+919906455143">+91 99064 55143</a>
+      <a href="contact.html">All contact options</a>
+    </div>
+    <div>
+      <h3>Follow</h3>
+      <a href="https://www.instagram.com/team100yards/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/Team100Yards" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.youtube.com/@team100yards" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://x.com/team100yards" target="_blank" rel="noopener">X (Twitter)</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="year">2026</span> 100 Yards. All rights reserved.</span>
+    <span>Built with purpose, one yard at a time.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
