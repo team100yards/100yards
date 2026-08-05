@@ -14,6 +14,7 @@
   --radius: 10px;
   --shadow: 0 12px 30px -12px rgba(20, 42, 29, 0.25);
   --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-brand: "Anton", "Oswald", "Arial Narrow", sans-serif;
   --font-body: "Source Sans 3", "Segoe UI", sans-serif;
 }
 
@@ -34,11 +35,12 @@ img { max-width: 100%; display: block; }
 a { color: inherit; }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   color: var(--turf-dark);
-  line-height: 1.15;
+  line-height: 1.1;
   margin: 0 0 0.5em;
 }
 
@@ -125,7 +127,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   gap: 10px;
   text-decoration: none;
 }
-.brand-logo { width: 40px; height: 40px; object-fit: contain; }
+.brand-logo { width: 46px; height: 46px; object-fit: contain; }
 .brand-name {
   font-family: var(--font-display);
   text-transform: uppercase;
@@ -179,7 +181,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 /* Hero --------------------------------------------------------------- */
 .hero {
   position: relative;
-  background: linear-gradient(160deg, var(--turf) 0%, var(--turf-dark) 100%);
+  background:
+    linear-gradient(160deg, rgba(20,42,29,0.88) 0%, rgba(20,42,29,0.94) 100%),
+    url('pitch-bg.svg') center / cover no-repeat;
   color: var(--bg);
   overflow: hidden;
   padding: 96px 0 64px;
@@ -215,21 +219,6 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   margin-top: 28px;
 }
 .hero.hero-page { padding: 64px 0 56px; }
-
-/* Yard-line field pattern: horizontal turf stripes fading into the hero */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    180deg,
-    rgba(255,255,255,0.05) 0px,
-    rgba(255,255,255,0.05) 2px,
-    transparent 2px,
-    transparent 64px
-  );
-  z-index: 1;
-}
 
 /* Yard marker divider — the site's signature element -------------------- */
 .yard-line {
@@ -321,7 +310,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 
 /* CTA banner ----------------------------------------------------------- */
 .cta-banner {
-  background: linear-gradient(160deg, var(--turf) 0%, var(--turf-dark) 100%);
+  background:
+    linear-gradient(160deg, rgba(20,42,29,0.88) 0%, rgba(20,42,29,0.94) 100%),
+    url('pitch-bg.svg') center / cover no-repeat;
   color: var(--bg);
   text-align: center;
   padding: 64px 24px;

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="500" fill="#142A1D"/>
+
+  <!-- mowed-stripe texture -->
+  <g opacity="0.5">
+    <rect x="40"  y="40" width="112" height="420" fill="#1B3826"/>
+    <rect x="264" y="40" width="112" height="420" fill="#1B3826"/>
+    <rect x="488" y="40" width="112" height="420" fill="#1B3826"/>
+    <rect x="712" y="40" width="112" height="420" fill="#1B3826"/>
+    <rect x="936" y="40" width="112" height="420" fill="#1B3826"/>
+  </g>
+
+  <!-- pitch markings -->
+  <g fill="none" stroke="#F5F1E6" stroke-width="4" opacity="0.85">
+    <rect x="40" y="40" width="1120" height="420"/>
+    <line x1="600" y1="40" x2="600" y2="460"/>
+    <circle cx="600" cy="250" r="72"/>
+    <circle cx="600" cy="250" r="4" fill="#F5F1E6" stroke="none"/>
+
+    <!-- left penalty area -->
+    <rect x="40" y="140" width="150" height="220"/>
+    <rect x="40" y="192" width="55" height="116"/>
+    <circle cx="155" cy="250" r="4" fill="#F5F1E6" stroke="none"/>
+    <path d="M190,192 A72,72 0 0 1 190,308"/>
+    <path d="M24,228 h-16 v44 h16" stroke-width="5"/>
+
+    <!-- right penalty area -->
+    <rect x="1010" y="140" width="150" height="220"/>
+    <rect x="1105" y="192" width="55" height="116"/>
+    <circle cx="1045" cy="250" r="4" fill="#F5F1E6" stroke="none"/>
+    <path d="M1010,192 A72,72 0 0 0 1010,308"/>
+    <path d="M1176,228 h16 v44 h-16" stroke-width="5"/>
+
+    <!-- corner arcs -->
+    <path d="M40,58 A18,18 0 0 0 58,40"/>
+    <path d="M1142,40 A18,18 0 0 0 1160,58"/>
+    <path d="M1160,442 A18,18 0 0 0 1142,460"/>
+    <path d="M58,460 A18,18 0 0 0 40,442"/>
+  </g>
+</svg>
