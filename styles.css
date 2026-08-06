@@ -218,7 +218,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   flex-wrap: wrap;
   margin-top: 28px;
 }
-.hero.hero-page { padding: 64px 0 56px; }
+
 
 /* Yard marker divider — the site's signature element -------------------- */
 .yard-line {
