@@ -186,9 +186,13 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
     url('pitch-bg.svg') center / cover no-repeat;
   color: var(--bg);
   overflow: hidden;
-  padding: 96px 0 64px;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  padding: 48px 0;
 }
 .hero-inner {
+  width: 100%;
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 24px;
