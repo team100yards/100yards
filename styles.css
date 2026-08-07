@@ -422,7 +422,14 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   gap: 16px;
   margin-bottom: 24px;
 }
+.embed-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.embed-wrap-full {
+  width: 100%;
+  padding: 0 24px;
+}
 .embed-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
   background: var(--bg);
   border: 1px solid rgba(28,33,23,0.08);
   border-radius: var(--radius);
@@ -431,10 +438,15 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 .embed-wrap iframe {
   width: 100%;
-  height: 85vh;
-  min-height: 600px;
+  height: 92vh;
+  min-height: 780px;
   border: 0;
   display: block;
+}
+.embed-wrap iframe:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  min-height: 0;
 }
 
 /* Footer ----------------------------------------------------------------- */

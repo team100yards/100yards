@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -65,17 +66,24 @@
           <span class="eyebrow">Live Squad View</span>
           <h2 style="margin-bottom: 0;">100 Yards Roster</h2>
         </div>
-        <a class="btn btn-dark" href="https://football-forms.web.app/?view=xceLgRzaVRt4nwm0XQDm" target="_blank" rel="noopener">Open full screen</a>
+        <div class="embed-actions">
+          <button type="button" class="btn btn-primary" id="team-fullscreen-btn">Full Screen</button>
+          <a class="btn btn-dark" id="team-open-link" href="#" target="_blank" rel="noopener">Open in New Tab</a>
+        </div>
       </div>
+    </div>
+    <div class="embed-wrap-full">
       <div class="embed-wrap">
         <iframe
-          src="https://football-forms.web.app/?view=xceLgRzaVRt4nwm0XQDm"
+          id="team-iframe"
           title="100 Yards Team Roster"
           loading="lazy"
           referrerpolicy="strict-origin-when-cross-origin">
         </iframe>
       </div>
-      <p class="note-card">Not loading below? Some browsers block embedded team dashboards — use the "Open full screen" button above to view it directly.</p>
+    </div>
+    <div class="container">
+      <p class="note-card">Content cut off or hard to scroll? Tap "Full Screen" above for the best view — it gives the dashboard your entire screen. "Open in New Tab" works too if Full Screen doesn't respond in your browser.</p>
     </div>
   </section>
 </main>
@@ -115,5 +123,27 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var link = window.TEAM_LINK || "";
+    var frame = document.getElementById("team-iframe");
+    var btn = document.getElementById("team-open-link");
+    var fsBtn = document.getElementById("team-fullscreen-btn");
+    if (link) {
+      if (frame) frame.src = link;
+      if (btn) btn.href = link;
+    }
+    if (fsBtn && frame) {
+      fsBtn.addEventListener("click", function () {
+        var req = frame.requestFullscreen || frame.webkitRequestFullscreen || frame.msRequestFullscreen;
+        if (req) {
+          req.call(frame);
+        } else if (btn) {
+          btn.click();
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>
