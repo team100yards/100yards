@@ -127,7 +127,13 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   gap: 16px;
   text-decoration: none;
 }
-.brand-logo { width: 92px; height: 92px; object-fit: contain; }
+.brand-logo { 
+  width: 76px; 
+  height: 76px; 
+  object-fit: cover; 
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(20, 42, 29, 0.15);
+}
 .brand-name {
   font-family: var(--font-brand);
   font-weight: 400;
@@ -875,7 +881,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   .yard-line .mark span { font-size: 0.6rem; }
 }
 @media (max-width: 720px) {
-  .brand-logo { width: 60px; height: 60px; }
+  .brand-logo { width: 54px; height: 54px; border-radius: 10px; }
   .brand-name { font-size: 1.5rem; }
   .nav-toggle { display: flex; }
   .site-nav {
