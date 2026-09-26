@@ -18,7 +18,7 @@ window.CONFIG = {
   
   // 100 Yards YouTube Video ID or embed URL (e.g., 'dQw4w9WgXcQ' or full URL)
   // Replace with your YouTube Video ID (found in youtube.com/watch?v=VIDEO_ID)
-  FEATURED_VIDEO_ID: "", // e.g. "your_video_id"
+  FEATURED_VIDEO_ID: "HQSjogAmUxQ", // e.g. "your_video_id"
   FEATURED_VIDEO_TITLE: "100 Yards — Training Drills & Match Highlights",
   
   // Contact & Social Links
