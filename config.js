@@ -16,10 +16,10 @@ window.CONFIG = {
   FIXTURES_URL: "https://football-event-managing-system.web.app",
   SQUADS_URL: "https://football-event-managing-system.web.app",
   
-  // 100 Yards YouTube Video ID or embed URL (e.g., 'dQw4w9WgXcQ' or full URL)
+  // 100 Yards YouTube Video ID or embed URL (e.g., 'HQSjogAmUxQ' or full URL)
   // Replace with your YouTube Video ID (found in youtube.com/watch?v=VIDEO_ID)
-  FEATURED_VIDEO_ID: "HQSjogAmUxQ", // e.g. "your_video_id"
-  FEATURED_VIDEO_TITLE: "100 Yards — Training Drills & Match Highlights",
+  FEATURED_VIDEO_ID: "HQSjogAmUxQ",
+  FEATURED_VIDEO_TITLE: "PLAYER TRACKING SYSTEM ⚽️ Built by coaches, for coaches.",
   
   // Contact & Social Links
   EMAIL: "100yards@proton.me",

@@ -42,17 +42,24 @@ window.CONFIG = {
   FIXTURES_URL: "https://football-event-managing-system.web.app",
   SQUADS_URL: "https://football-event-managing-system.web.app",
 
-  // Add your YouTube video ID (found at youtube.com/watch?v=VIDEO_ID)
-  FEATURED_VIDEO_ID: "YOUR_YOUTUBE_VIDEO_ID",
-  FEATURED_VIDEO_TITLE: "100 Yards — Training Drills & Match Highlights",
+  // Add your YouTube video ID or full link
+  FEATURED_VIDEO_ID: "HQSjogAmUxQ",
+  FEATURED_VIDEO_TITLE: "PLAYER TRACKING SYSTEM ⚽️ Built by coaches, for coaches.",
 };
 ```
 
 ---
 
-## 3. How to Upload & Embed 100 Yards Videos (Free)
+## 3. How to Change or Add a YouTube Video
 
-1. Upload your video to **YouTube** (under your channel `@team100yards`). You can set the video to **Public** or **Unlisted** (unlisted means only visitors on your website or those with the link can watch).
-2. Copy the video ID from the YouTube URL (for example, in `youtube.com/watch?v=abc123XYZ`, the ID is `abc123XYZ`).
-3. Open `config.js` on GitHub, set `FEATURED_VIDEO_ID: "abc123XYZ"`, and commit.
-4. The video will immediately load in the responsive HD video player on `resources.html`.
+1. Upload your video to **YouTube** (under your channel `@team100yards`). You can set the video to **Public** or **Unlisted**.
+2. Copy the video ID or the link:
+   - Example ID: `HQSjogAmUxQ`
+   - Or full link: `https://www.youtube.com/watch?v=HQSjogAmUxQ`
+   - Or short link: `https://youtu.be/HQSjogAmUxQ`
+3. Open **`config.js`** and set:
+   ```javascript
+   FEATURED_VIDEO_ID: "HQSjogAmUxQ",
+   FEATURED_VIDEO_TITLE: "Your Video Title Here",
+   ```
+4. Save and upload **`config.js`** to GitHub. The video will immediately load on the website without editing any HTML!

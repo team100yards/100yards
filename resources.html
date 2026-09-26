@@ -67,21 +67,22 @@
       <div class="video-card" id="featured-video-container">
         <div class="section-head" style="margin-bottom: 12px;">
           <span class="eyebrow">Featured Video</span>
-          <h2 style="margin-bottom: 6px;" id="video-title">100 Yards Training & Match Showcase</h2>
-          <p id="video-desc">Watch our players and coaches in action. Subscribe to our official channel for complete drills and session recaps.</p>
+          <h2 style="margin-bottom: 6px;" id="video-title">PLAYER TRACKING SYSTEM ⚽️ Built by coaches, for coaches.</h2>
+          <p id="video-desc">Watch our tactical player tracking and squad management video. Built by coaches, for coaches.</p>
         </div>
         <div class="video-responsive">
           <iframe
             id="video-frame"
-            src="https://www.youtube-nocookie.com/embed?listType=user_uploads&list=team100yards"
-            title="100 Yards Video"
+            src="https://www.youtube.com/embed/HQSjogAmUxQ?rel=0"
+            title="PLAYER TRACKING SYSTEM ⚽️ Built by coaches, for coaches."
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen>
           </iframe>
         </div>
         <div style="margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap;">
           <a class="btn btn-primary" id="youtube-btn" href="https://www.youtube.com/@team100yards" target="_blank" rel="noopener">Visit YouTube Channel</a>
-          <a class="btn btn-dark" href="https://www.instagram.com/team100yards" target="_blank" rel="noopener">Watch on Instagram Reels</a>
+          <a class="btn btn-dark" href="https://www.youtube.com/watch?v=HQSjogAmUxQ" target="_blank" rel="noopener">Watch on YouTube ↗</a>
         </div>
       </div>
 
@@ -186,11 +187,20 @@
       ytBtn.href = cfg.YOUTUBE_URL;
     }
 
-    // If a specific featured video ID is set in config.js, load it
+    // Robust YouTube Embed Parser
+    function getYouTubeEmbedUrl(input) {
+      if (!input) return "https://www.youtube.com/embed/HQSjogAmUxQ?rel=0";
+      var trimmed = String(input).trim();
+      var match = trimmed.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/);
+      var videoId = (match && match[1]) ? match[1] : trimmed;
+      return "https://www.youtube.com/embed/" + videoId + "?rel=0";
+    }
+
     var videoFrame = document.getElementById("video-frame");
     var videoTitle = document.getElementById("video-title");
-    if (videoFrame && cfg.FEATURED_VIDEO_ID) {
-      videoFrame.src = "https://www.youtube-nocookie.com/embed/" + cfg.FEATURED_VIDEO_ID;
+    var vidVal = cfg.FEATURED_VIDEO_ID || "HQSjogAmUxQ";
+    if (videoFrame && vidVal) {
+      videoFrame.src = getYouTubeEmbedUrl(vidVal);
     }
     if (videoTitle && cfg.FEATURED_VIDEO_TITLE) {
       videoTitle.textContent = cfg.FEATURED_VIDEO_TITLE;
